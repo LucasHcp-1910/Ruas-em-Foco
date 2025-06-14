@@ -1,0 +1,1261 @@
+  /* Seletor universal */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+
+  /* Body e Html */
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Georgia', serif;
+    color: rgb(255, 255, 255);
+    background-color: rgb(121, 119, 119);
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Fundo = Imagem de fundo */
+  .fundo {
+    background: url('../assets/PaginaInicial.jpg')center;
+    background-size: cover;
+    height: 100vh;
+  }
+
+
+  /* Deixa o fundo mais escuro e desfocado */
+  .fundo::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+  }
+
+  /* Quadrado preto semi-transparente */
+  .destaque {
+    position: relative;
+    margin: 0 auto;
+    max-width: 90%;
+    padding: 9vw 5vw;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 99%;
+    text-align: center;
+  }
+
+  /* Cabeçalho: Título e logo */
+  .header {
+    position: absolute;
+    top: 5vw;
+    width: auto;
+    text-align: center;
+    z-index: 2;
+  }
+
+  /* Título */
+  .titulo {
+    font-size: 4.15vw;
+    text-align: center;
+    color: rgb(251, 235, 198);
+    z-index: 1;
+    position: relative;
+  }
+
+  /* Sublinhado personalizado título */
+  .titulo::after {
+    content: "";
+    position: absolute;
+    left: 12.5%;
+    bottom: 0;
+    width: 75%;
+    height: 0.5vw;
+    background: rgb(251, 235, 198);
+  }
+
+  /* Logo */
+  .div_logo {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    margin-top: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4vw;
+  }
+
+  /* Tamanho e opacidade da logo */
+  .logo {
+    width: 50%;
+    max-width: 111vw;
+    opacity: 80%;
+  }
+
+  /* Molduras da câmera, tamanho */
+  .moldura {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+  }
+
+  /* Moldura canto esquerdo interior */
+  .canto-esquerdo-dentro {
+    position: absolute;
+    width: 13.5vw;
+    height: 13.5vw;
+    border: 1.5vw solid #f5deb3;
+    bottom: 23%;
+    left: 15%;
+    border-right: none;
+    border-top: none;
+    border-radius: 1.2vw;
+  }
+
+  /* Moldura canto direito interior */
+  .canto-direito-dentro {
+    position: absolute;
+    width: 13.5vw;
+    height: 13.5vw;
+    border: 1.5vw solid #f5deb3;
+    top: 23%;
+    right: 15%;
+    border-left: none;
+    border-bottom: none;
+    border-radius: 1.2vw;
+  }
+
+  /* Moldura canto esquerdo exterior */
+  .canto-esquerdo-fora {
+    position: absolute;
+    width: 15.5vw;
+    height: 15.5vw;
+    border: 2vw solid #f5deb3;
+    bottom: 0%;
+    left: 0%;
+    border-right: none;
+    border-top: none;
+    border-radius: 2vw;
+  }
+
+  /* Moldura canto direito exterior */
+  .canto-direito-fora {
+    position: absolute;
+    width: 15.5vw;
+    height: 15.5vw;
+    border: 2vw solid #f5deb3;
+    top: 0%;
+    right: 0%;
+    border-left: none;
+    border-bottom: none;
+    border-radius: 2vw;
+  }
+
+  /* Navegação */
+  .nav {
+    position: absolute;
+    bottom: 6%;
+    width: 100%;
+    background-color: transparent;
+    z-index: 2;
+  }
+
+  /* Ul da navegação */
+  .nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 10vw;
+    padding: 4.5vw 0;
+    list-style: none;
+  }
+
+  /* Links */
+  .nav ul li a {
+    font-weight: bold;
+    color: #fbe3b5;
+    text-shadow: 0.2vw 0.2vw 0.4vw #000;
+    text-decoration: none;
+    font-family: 'Georgia', serif;
+    transition: 0.3s;
+  }
+
+  /* Links Hover */
+  .nav ul li a:hover {
+    color: #dcbf95;
+  }
+
+  /* Botão ir para a Galeria */
+  .galeriabutton {
+    background-color: #f5deb3;
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 2.5vw;
+    padding: 2.5vw 5.5vw;
+    font-family: 'Georgia', serif;
+    box-shadow: 0.5vw 0.5vw 1.5vw rgba(0, 0, 0, 0.4);
+    transition: 0.3s;
+  }
+
+  /* Em cima do botão ir para galeria */
+  .galeriabutton:hover {
+    background-color: #e5c98c;
+    text-decoration: underline;
+  }
+
+  /* Ícone carrinho */
+  .icon {
+    width: auto;
+    margin-right: 5%;
+    vertical-align: middle;
+  }
+
+  /* Link carrinho */
+  .carrinho {
+    position: absolute;
+    left: -2%;
+    top: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+    color: #fbe3b5;
+    text-shadow: 1vw 1vw 2vw #000;
+  }
+
+  /* Carrinho texto */
+  .carrinho span {
+    position: relative;
+    display: inline-block;
+  }
+
+  /* Sublinhado carrinho */
+  .carrinho span::after {
+    content: "";
+    position: absolute;
+    bottom: 4vw;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fbe3b5;
+  }
+
+  /* Imagem carrinho */
+  .carrinho img {
+    width: 32px;
+    margin-bottom: 1vw;
+  }
+
+
+
+  /* GALERIA */
+
+  /* Conteúdo do site */
+  main {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    width: 100%;
+    margin-top: -5vh;
+  }
+
+  /* Conteúdo principal */
+  .conteudo-principal {
+    position: relative;
+    z-index: 2;
+    max-width: 100%;
+    color: #fff;
+    text-align: center;
+  }
+
+  /* Títulos usados no main */
+  .titulomain {
+    margin-bottom: 5vw;
+    font-size: 4.15vw;
+    text-align: center;
+    color: rgb(251, 235, 198);
+    z-index: 1;
+    position: relative;
+  }
+
+  /* Localização */
+  .localizacao {
+    font-size: 3vw;
+    color: #ffdf7f;
+  }
+
+  /* Ícone localização */
+  .iconloc {
+    margin-right: 2vw;
+    color: #ffdf7f;
+    width: 4vw;
+    vertical-align: middle;
+  }
+
+  /* Card com imagem e texto */
+  .card {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #333;
+    border-radius: 5vw;
+    margin: 5%;
+    overflow: hidden;
+    text-align: left;
+    margin-bottom: 4vw;
+    padding: 0vw;
+  }
+
+  /* Imagem card */
+  .card img {
+    width: 100vw;
+    height: 100vw;
+  }
+
+  /* Moldura */
+  .moldurasecao {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+  }
+
+  /* Moldura canto esquerdo interior main */
+  .ced {
+    position: absolute;
+    width: 13.5vw;
+    height: 13.5vw;
+    border: 1.5vw solid #f5deb3;
+    bottom: 0%;
+    left: 5%;
+    border-right: none;
+    border-top: none;
+    border-radius: 1.2vw;
+  }
+
+  /* Moldura canto direito interior main */
+  .cdd {
+    position: absolute;
+    width: 13.5vw;
+    height: 13.5vw;
+    border: 1.5vw solid #f5deb3;
+    top: 18.5%;
+    right: 5%;
+    border-left: none;
+    border-bottom: none;
+    border-radius: 1.2vw;
+  }
+
+  /* Moldura canto esquerdo exterior main */
+  .cef {
+    position: absolute;
+    width: 15.5vw;
+    height: 15.5vw;
+    border: 2vw solid #f5deb3;
+    bottom: 83.5%;
+    left: 0%;
+    border-right: none;
+    border-top: none;
+    border-radius: 2vw;
+  }
+
+  /* Moldura canto direito exterior main */
+  .cdf {
+    position: absolute;
+    width: 15.5vw;
+    height: 15.5vw;
+    border: 2vw solid #f5deb3;
+    top: 0%;
+    right: 0%;
+    border-left: none;
+    border-bottom: none;
+    border-radius: 2vw;
+  }
+
+  /* Texto galeria */
+  .textogal {
+    padding: 2vw;
+    flex: 1;
+    color: #f3f3f3;
+  }
+
+  /* Texto galeria h2 */
+  .textogal h2 {
+    margin-bottom: 10px;
+    color: #f9e7c1;
+  }
+
+  /* Botão galeria */
+  .botao-galeria {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background-color: #f9e7c1;
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
+  }
+
+  /* Hover botão galeria */
+  .botao-galeria:hover {
+    background-color: #ffd369;
+    transform: scale(1.05);
+  }
+
+  /* Retângulo semi-transparente fundo título */
+  .retangulo {
+    position: relative;
+    margin-top: 15vw;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 30vw;
+    text-align: center;
+  }
+
+  .prox,
+  .ante {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 8vw;
+    font-weight: bold;
+    color: #fbe3b5;
+    z-index: 5;
+    cursor: pointer;
+    user-select: none;
+    text-shadow: 2px 2px 4px #000;
+  }
+
+  .prox {
+    right: 0vw;
+  }
+
+  .ante {
+    left: 0vw;
+  }
+
+  /* Galeria SP */
+
+  /* Fundo com imagem e blur */
+  .fundogaleriasp {
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/fundo-desfocado-sp.png');
+    background-position: center;
+    filter: blur(0px);
+    position: relative;
+  }
+
+  /* Blur e escurecimento da imagem */
+  .fundogaleriasp::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+
+  /* Galeria RJ */
+
+  /* Fundo com imagem e blur */
+  .fundogaleriarj {
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/fundo-desfocado-rj.png');
+    background-position: center;
+    filter: blur(0px);
+    position: relative;
+    margin-top: -5vh;
+  }
+
+  /* Blur e escurecimento da imagem */
+  .fundogaleriarj::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+
+  /* Galeria SC */
+
+  /* Fundo com imagem e blur */
+  .fundogaleriasc {
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/fundo-desfocado-sc.png');
+    background-position: center;
+    filter: blur(0px);
+    position: relative;
+    margin-top: -5vh;
+  }
+
+  /* Blur e escurecimento da imagem */
+  .fundogaleriasc::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+
+  /* Telas maiores que 320px */
+  @media screen and (min-width: 320px) {
+    body {
+      font-size: 4vw;
+    }
+
+    .div_logo {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      margin-top: 90%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4vw;
+    }
+
+    .logo {
+      width: 80%;
+      max-width: 150vw;
+      opacity: 80%;
+    }
+
+    .carrinho {
+      position: absolute;
+      left: -2%;
+      top: 90%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-weight: bold;
+      color: #fbe3b5;
+      text-shadow: 1vw 1vw 1vw #000;
+    }
+
+    .carrinho img {
+      width: 8.25vw;
+      margin-bottom: 2.5vw;
+    }
+
+
+    .carrinho span {
+      position: relative;
+      display: inline-block;
+    }
+
+    .carrinho span::after {
+      content: "";
+      position: absolute;
+      bottom: 4vw;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #fbe3b5;
+    }
+  }
+
+  /* Telas maiores que 480px */
+  @media screen and (min-width: 480px) {
+    body {
+      font-size: 3.5vw;
+    }
+
+    .div_logo {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      margin-top: 55%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4vw;
+    }
+
+    .logo {
+      width: 60%;
+      max-width: 200vw;
+      opacity: 80%;
+    }
+
+    .carrinho {
+      position: absolute;
+      left: -2%;
+      top: 55%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-weight: bold;
+      color: #fbe3b5;
+      text-shadow: 1vw 1vw 1vw #000;
+    }
+
+    .carrinho img {
+      width: 8.25vw;
+      margin-bottom: 1vw;
+    }
+
+
+    .carrinho span {
+      position: relative;
+      display: inline-block;
+    }
+
+    .carrinho span::after {
+      content: "";
+      position: absolute;
+      bottom: 4vw;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #fbe3b5;
+    }
+  }
+
+  /* Telas maiores que 600px */
+  @media screen and (min-width: 600px) {
+    body {
+      font-size: 2.75vw;
+    }
+
+    .carrinho {
+      position: absolute;
+      left: -2%;
+      top: 55%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-weight: bold;
+      color: #fbe3b5;
+      text-shadow: 1vw 1vw 1vw #000;
+    }
+
+    .carrinho img {
+      width: 7vw;
+      margin-bottom: 1vw;
+    }
+
+
+    .carrinho span {
+      position: relative;
+      display: inline-block;
+    }
+
+    .carrinho span::after {
+      content: "";
+      position: absolute;
+      bottom: 4vw;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #fbe3b5;
+    }
+
+    .cdd {
+      position: absolute;
+      width: 13.5vw;
+      height: 13.5vw;
+      border: 1.5vw solid #f5deb3;
+      top: 19 .5%;
+      right: 5%;
+      border-left: none;
+      border-bottom: none;
+      border-radius: 1.2vw;
+    }
+
+    .cef {
+      position: absolute;
+      width: 15.5vw;
+      height: 15.5vw;
+      border: 2vw solid #f5deb3;
+      bottom: 82.8%;
+      left: 0%;
+      border-right: none;
+      border-top: none;
+      border-radius: 2vw;
+    }
+  }
+
+  /* Telas maiores que 700px */
+
+  @media screen and (min-width: 700px) {
+    .div_logo {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      margin-top: 25%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4vw;
+    }
+
+    .logo {
+      width: 50%;
+      max-width: 111vw;
+      opacity: 80%;
+    }
+
+    .ced {
+      position: absolute;
+      width: 13.5vw;
+      height: 13.5vw;
+      border: 1vw solid #f5deb3;
+      bottom: 0%;
+      left: 5%;
+      border-right: none;
+      border-top: none;
+      border-radius: 1vw;
+    }
+
+    .cdd {
+      position: absolute;
+      width: 13.5vw;
+      height: 13.5vw;
+      border: 1vw solid #f5deb3;
+      top: 21.2%;
+      right: 5%;
+      border-left: none;
+      border-bottom: none;
+      border-radius: 1vw;
+    }
+
+    .cef {
+      position: absolute;
+      width: 14vw;
+      height: 14vw;
+      border: 1vw solid #f5deb3;
+      bottom: 81.5%;
+      left: 0%;
+      border-right: none;
+      border-top: none;
+      border-radius: 1vw;
+    }
+
+    .cdf {
+      position: absolute;
+      width: 15.5vw;
+      height: 15.5vw;
+      border: 1vw solid #f5deb3;
+      top: 0%;
+      right: 0%;
+      border-left: none;
+      border-bottom: none;
+      border-radius: 1vw;
+    }
+
+    .canto-esquerdo-dentro {
+      position: absolute;
+      width: 13.5vw;
+      height: 13.5vw;
+      border: 1vw solid #f5deb3;
+      bottom: 23%;
+      left: 15%;
+      border-right: none;
+      border-top: none;
+      border-radius: 0.9vw;
+    }
+
+    .canto-direito-dentro {
+      position: absolute;
+      width: 13.5vw;
+      height: 13.5vw;
+      border: 1vw solid #f5deb3;
+      top: 23%;
+      right: 15%;
+      border-left: none;
+      border-bottom: none;
+      border-radius: 0.9vw;
+    }
+
+    .canto-esquerdo-fora {
+      position: absolute;
+      width: 15.5vw;
+      height: 15.5vw;
+      border: 1vw solid #f5deb3;
+      bottom: 0%;
+      left: 0%;
+      border-right: none;
+      border-top: none;
+      border-radius: 0.9vw;
+    }
+
+    .canto-direito-fora {
+      position: absolute;
+      width: 15.5vw;
+      height: 15.5vw;
+      border: 1vw solid #f5deb3;
+      top: 0%;
+      right: 0%;
+      border-left: none;
+      border-bottom: none;
+      border-radius: 0.9vw;
+    }
+
+    .carrinho {
+      position: absolute;
+      left: -2%;
+      top: 55%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-weight: bold;
+      color: #fbe3b5;
+      text-shadow: 1vw 1vw 1vw #000;
+    }
+
+    .carrinho img {
+      width: 7vw;
+      margin-bottom: 1vw;
+    }
+
+
+    .carrinho span {
+      position: relative;
+      display: inline-block;
+    }
+
+    .carrinho span::after {
+      content: "";
+      position: absolute;
+      bottom: 4vw;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #fbe3b5;
+    }
+  }
+
+  /* Telas maiores que 768px*/
+  @media screen and (min-width: 768px) {
+    .div_logo {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      margin-top: 22%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4vw;
+    }
+
+    .logo {
+      width: 45%;
+      max-width: 300vw;
+      opacity: 80%;
+    }
+
+    .ced {
+      position: absolute;
+      width: 13.5vw;
+      height: 13.5vw;
+      border: 1vw solid #f5deb3;
+      bottom: 0%;
+      left: 5%;
+      border-right: none;
+      border-top: none;
+      border-radius: 1vw;
+    }
+
+    .cdd {
+      position: absolute;
+      width: 13.5vw;
+      height: 13.5vw;
+      border: 1vw solid #f5deb3;
+      top: 21.5%;
+      right: 5%;
+      border-left: none;
+      border-bottom: none;
+      border-radius: 1vw;
+    }
+
+    .cef {
+      position: absolute;
+      width: 14vw;
+      height: 14vw;
+      border: 1vw solid #f5deb3;
+      bottom: 82.5%;
+      left: 0%;
+      border-right: none;
+      border-top: none;
+      border-radius: 1vw;
+    }
+
+    .cdf {
+      position: absolute;
+      width: 15.5vw;
+      height: 15.5vw;
+      border: 1vw solid #f5deb3;
+      top: 0%;
+      right: 0%;
+      border-left: none;
+      border-bottom: none;
+      border-radius: 1vw;
+    }
+
+    .canto-esquerdo-dentro {
+      position: absolute;
+      width: 13.5vw;
+      height: 13.5vw;
+      border: 1vw solid #f5deb3;
+      bottom: 23%;
+      left: 15%;
+      border-right: none;
+      border-top: none;
+      border-radius: 0.9vw;
+    }
+
+    .canto-direito-dentro {
+      position: absolute;
+      width: 13.5vw;
+      height: 13.5vw;
+      border: 1vw solid #f5deb3;
+      top: 23%;
+      right: 15%;
+      border-left: none;
+      border-bottom: none;
+      border-radius: 0.9vw;
+    }
+
+    .canto-esquerdo-fora {
+      position: absolute;
+      width: 15.5vw;
+      height: 15.5vw;
+      border: 1vw solid #f5deb3;
+      bottom: 0%;
+      left: 0%;
+      border-right: none;
+      border-top: none;
+      border-radius: 0.9vw;
+    }
+
+    .canto-direito-fora {
+      position: absolute;
+      width: 15.5vw;
+      height: 15.5vw;
+      border: 1vw solid #f5deb3;
+      top: 0%;
+      right: 0%;
+      border-left: none;
+      border-bottom: none;
+      border-radius: 0.9vw;
+    }
+
+    .carrinho {
+      position: absolute;
+      left: -2%;
+      top: 60%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-weight: bold;
+      color: #fbe3b5;
+      text-shadow: 1vw 1vw 1vw #000;
+    }
+
+    .carrinho img {
+      width: 6vw;
+      margin-bottom: 1vw;
+    }
+
+
+    .carrinho span {
+      position: relative;
+      display: inline-block;
+    }
+
+    .carrinho span::after {
+      content: "";
+      position: absolute;
+      bottom: 3,2vw;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #fbe3b5;
+    }
+  }
+
+  /* Laptops pequenos e tablets em modo paisagem (>= 992px) */
+  @media (min-width: 992px) {
+    .titulo {
+      font-size: clamp(28px, 3vw, 42px);
+    }
+
+    .nav ul {
+      gap: 3vw;
+    }
+
+    .card {
+      margin: 3% auto;
+      padding: 2vw;
+    }
+
+    .textogal {
+      font-size: 1vw;
+    }
+  }
+
+  /* Telas maiores que 1008px */
+  @media (min-width:1008px) {
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body,
+    html {
+      height: 100%;
+      font-family: 'Georgia', serif;
+      color: rgb(255, 255, 255);
+      background-color: rgb(0, 0, 0);
+      width: auto;
+    }
+
+    .fundo {
+      background: url('../assets/PaginaInicial.jpg') no-repeat center center;
+      background-size: cover;
+      height: 99.2vh;
+      position: relative;
+    }
+
+    .fundo::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: 1;
+    }
+
+    .header {
+      position: absolute;
+      top: 20px;
+      width: auto;
+      text-align: center;
+      z-index: 2;
+    }
+
+    .titulo {
+      font-size: 250%;
+      text-align: center;
+      color: rgb(251, 235, 198);
+      z-index: 1;
+      position: relative;
+    }
+
+    .titulo::after {
+      content: "";
+      position: absolute;
+      left: 28%;
+      bottom: 0;
+      width: 45%;
+      height: 2px;
+      background: rgb(251, 235, 198);
+    }
+
+    .nav {
+      position: absolute;
+      bottom: 5%;
+      width: 100%;
+      background-color: transparent;
+      z-index: 2;
+    }
+
+    .nav ul {
+      display: flex;
+      justify-content: center;
+      gap: 60px;
+      padding: 20px 0;
+      list-style: none;
+    }
+
+    .nav ul li a {
+      font-weight: bold;
+      color: #fbe3b5;
+      text-shadow: 1px 1px 2px #000;
+      text-decoration: none;
+      font-family: 'Georgia', serif;
+      transition: 0.3s;
+    }
+
+    .nav ul li a:hover {
+      color: #dcbf95;
+    }
+
+    .div_logo {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      margin-top: 100px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo {
+      width: 50%;
+      max-width: 500px;
+      opacity: 80%;
+    }
+
+    .galeriabutton {
+      background-color: #f5deb3;
+      color: #000;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 12px;
+      padding: 12px 24px;
+      font-family: 'Georgia', serif;
+      box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+      transition: 0.3s;
+    }
+
+    .galeriabutton:hover {
+      background-color: #e5c98c;
+      text-decoration: underline;
+    }
+
+    .moldura {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 3;
+    }
+
+    .canto-esquerdo-dentro {
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      border: 6px solid #f5deb3;
+      bottom: 23%;
+      left: 25%;
+      border-right: none;
+      border-top: none;
+      border-radius: 5px;
+    }
+
+    .canto-direito-dentro {
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      border: 6px solid #f5deb3;
+      top: 23%;
+      right: 25%;
+      border-left: none;
+      border-bottom: none;
+      border-radius: 5%;
+    }
+
+    .canto-esquerdo-fora {
+      position: absolute;
+      width: 70px;
+      height: 70px;
+      border: 8px solid #f5deb3;
+      bottom: 0%;
+      left: 0%;
+      border-right: none;
+      border-top: none;
+      border-radius: 8px;
+    }
+
+    .canto-direito-fora {
+      position: absolute;
+      width: 70px;
+      height: 70px;
+      border: 8px solid #f5deb3;
+      top: 0%;
+      right: 0%;
+      border-left: none;
+      border-bottom: none;
+      border-radius: 8px;
+    }
+
+    .destaque {
+      position: relative;
+      margin: 0 auto;
+      max-width: 90%;
+      padding: 40px 20px;
+      background-color: rgba(0, 0, 0, 0.4);
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100%;
+      text-align: center;
+    }
+
+    .icon {
+      width: auto;
+      margin-right: 13px;
+      vertical-align: middle;
+    }
+
+    .carrinho {
+      position: absolute;
+      left: 10px;
+      bottom: -30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-weight: bold;
+      color: #fbe3b5;
+      text-shadow: 1px 1px 2px #000;
+    }
+
+    .carrinho img {
+      width: 32px;
+      margin-bottom: 2px;
+    }
+  }
+
+    /* Telas maiores que 1200px */
+  @media (min-width: 1200x) {
+    body {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .logo {
+      width: clamp(200px, 25vw, 300px);
+    }
+
+    .galeriabutton {
+      font-size: 18px;
+      padding: 16px 32px;
+    }
+
+    .card {
+      border-radius: 3vw;
+    }
+  }
